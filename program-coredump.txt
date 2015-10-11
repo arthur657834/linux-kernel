@@ -1,0 +1,13 @@
+ulimit -c unlimited
+echo kernel.core_pattern=/var/%t-%e-%p-%c.core >>/etc/sysctl.conf 文件路径一定要存在
+sysctl -p
+./a.out
+
+测试文件：
+#include<stdio.h>
+int main(void)
+{
+        int *a=NULL;
+        *a=0x1;
+        return 0;
+}

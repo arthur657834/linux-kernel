@@ -1,0 +1,35 @@
+http://www.thegeekstuff.com/2014/05/kdump/
+http://www.ibm.com/developerworks/cn/linux/l-cn-dumpanalyse/
+
+yum -y install system-config-kdump kdump的界面配置软件包，需要桌面系统
+
+yum -y install kernel-debug kexec-tools
+
+chkconfig kdump on
+chkconfig --list | grep kdump
+
+将
+kernel /vmlinuz-2.6.32-573.7.1.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_NO_LUKS rd_NO_MD rd_LVM_LV=VolGroup/lv_swap crashkernel=auto
+修改为
+kernel /vmlinuz-2.6.32-573.7.1.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_NO_LUKS rd_NO_MD rd_LVM_LV=VolGroup/lv_swap crashkernel=256M
+重启生效
+128M@16M  crashkernel=X@Y   可以完全省略“@Y”这一部分，这样，kernel 会为我们自动选择一个起始地址。
+
+echo c > /proc/sysrq-trigger 测试有没有用
+
+/etc/kdump.conf 
+查看kdump配置
+
+core文件调试(跟gdb差不多)：
+使用 crash 的先决条件
+由于 crash 用于调试内核崩溃的转储文件，因此使用 crash 需要依赖如下条件：
+kernel 映像文件 vmlinux 在编译的时候必须指定了 -g 参数，即带有调试信息
+
+crash /var/crash/127.0.0.1-2014-03-26-12\:24\:39/vmcore /usr/lib/debug/lib/modules/`uname –r`/vmlinux
+crash调试命令
+ps,swap,files,ipcs,irq -s,vm,sys
+
+vmlinux应该是自己编译的内核文件
+
+
+
