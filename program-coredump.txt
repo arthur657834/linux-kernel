@@ -1,5 +1,5 @@
 ulimit -c unlimited
-echo kernel.core_pattern=/var/%t-%e-%p-%c.core >>/etc/sysctl.conf 文件路径一定要存在
+echo kernel.core_pattern=/var/%t-%e-%p-%c.core >>/etc/sysctl.conf 文件路径一定要存在git 
 sysctl -p
 ./a.out
 
