@@ -1,35 +1,28 @@
-http://www.thegeekstuff.com/2014/05/kdump/
-http://www.ibm.com/developerworks/cn/linux/l-cn-dumpanalyse/
-
-yum -y install system-config-kdump kdump的界面配置软件包，需要桌面系统
-
-yum -y install kernel-debug kexec-tools
-
-chkconfig kdump on
-chkconfig --list | grep kdump
-
-将
-kernel /vmlinuz-2.6.32-573.7.1.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_NO_LUKS rd_NO_MD rd_LVM_LV=VolGroup/lv_swap crashkernel=auto
-修改为
-kernel /vmlinuz-2.6.32-573.7.1.el6.x86_64 ro root=/dev/mapper/VolGroup-lv_root rd_NO_LUKS rd_NO_MD rd_LVM_LV=VolGroup/lv_swap crashkernel=256M
-重启生效
-128M@16M  crashkernel=X@Y   可以完全省略“@Y”这一部分，这样，kernel 会为我们自动选择一个起始地址。
-
-echo c > /proc/sysrq-trigger 测试有没有用
-
-/etc/kdump.conf 
-查看kdump配置
-
-core文件调试(跟gdb差不多)：
-使用 crash 的先决条件
-由于 crash 用于调试内核崩溃的转储文件，因此使用 crash 需要依赖如下条件：
-kernel 映像文件 vmlinux 在编译的时候必须指定了 -g 参数，即带有调试信息
-
-crash /var/crash/127.0.0.1-2014-03-26-12\:24\:39/vmcore /usr/lib/debug/lib/modules/`uname –r`/vmlinux
-crash调试命令
-ps,swap,files,ipcs,irq -s,vm,sys
-
-vmlinux应该是自己编译的内核文件
-
-
-
+U2FsdGVkX1/9X0plf6BCJLeDsWVHDRss6bIpkfXFizHQAWIKBHh4sXRR90J8HZXF
+iwLmCf3t8BAorSTWBFi+v2lU8ZRjXk8d2j/1vJsXKw5TtaVTBquagRk8Intg/Yxn
+ZRlPi9T3/fnnAGRbsuFAhOBAk3Vl0BfrnZeflevoSVo5ZpR4q6XNaBht9IZNVJ95
+QSHy59mlx8k2jgPVyKfru+Z0X04iDxtaQDhZWiIrjGq8kIveBU4V4krhfmNTrrGA
+1p8RjmBrWmEC9HrGplotn21eftAwBK1nH6ZU1NsX9jd04NL6qQsy+N070BKYwOEH
+8rWLs2UGLtpX0q+h5AHI8tANWWTOOJCXh4bTN1SaCGFnJM6S4Oa7W6Po0vmngn1W
+lEdH9m5d/Y6v+6uJ7+CtBm6jGgqYCxj36/9H9bBhQuWu65IB37sdB9MAo5uN4wwJ
+eCOlx7wcnEZ26kQTfx0kBZZJnoch/ze6D3koJaE0umFgaW0ta9ZsXdud8K1HiKSl
+C1gxJof++lpU86/udccgEcYgsjxUWsk0Pa46uHlUfwHmtM3qkSZAgzTpQ8aA283l
+6NHkUaEDxEwtLlTPzCHEHO/RS7uMgEPx/GuUGQQzfxfEL3kxcPca72nSVlxsfNLF
+tpN2OoOCaD/8Ughn7uukkKsG30dEkHfdoG+5mMKBxN8cmW/f4woK/LOQLmT51Yeh
+pD0J0QOXUcbfBkYa2wsQKWUMnrbnt85OacMdrQbdORrMSke0HxKMFJVUUYL8XuZG
+P+23L7yC1pKOQ8N5Skk4MrNIxLV6cpU+kmXut7ogUQuVKLrm+GkEIbWmpzFnx9OU
+FUdy2KKfhLX1gPHrNUniMSIBZo8oMXYsbqnu9MQLVveQSLVK20+ztKzySclFM83b
+OmwlJiA4oXGj39tiqra0KjFaH/r7K5LjRZ3plp+v9oJV0MQiiWrhvh7LJ5AzHuWz
+AvMznfb3vGouCZQpwidd6HVTKF4uc27D4e0kPGxjAZ7ENHl8P0D2DQ23HdMSFEYp
+H0YPl/GyvPlH6SZ2Hj/32rGQ5U8JT2IsICYrMlIxt0BDhysa7KY+jH5HWLWbgIvY
+3BDzxUT8A0C297y2AmLXfDpgQUNxFsW+3VsXNEmAiHXgDuJuZ6c/vXUvlgzwOJEG
+Ya6c4Bkj23ElTxFZEcqy0s+55ku9eX3GVxVfs3IasgqwkhqLXtX2IdN3inAP63Tt
+jNfzfKW3T7xZvjRrZxeb2jw54a/kLHC3rVPle/ZdlFCCh/yYe22SmbCeGIQ5Hxzx
+78+bG17Ar++oa3cRGiLDVbACckhdXwkLtFOek4tsOlYE1aOaOTmZ5jCW0za9Tiue
+g1gcuL5TUuJUr8v5t9HS7QhJnR+X0Wpv9Z4FnSeh4MAmESXbbIabH9fUWV6r5iRb
+yU/2XO3vAvJNzbdXYf936SaGf6AIzL8LQ72jXibBus+74kDR+sF2vrMRCB7Sd0x4
+i4dS4dMJY2HUlbnjn5E/3hQk/Drl3aoUz5kGyJ860YR7VMDgWx6ocF76CaBI7e8N
+x6EFPPZdUxAnwWHNr10uqdH3AZiahVZd1pJTjnywO151j7P7p49Sm4yEWlAUxCof
+/dV+LsxG6SIE4LuO4ihlBzbZrYEUrC6aKvJXUTpEm+mMz/yfC5oEF0zM+QRDCJTe
+vYwq+toFgvv/NIJgGLTg4Ozrs03KIy2sZRRwriYZIssr6Ba037njtUQ9uZ/JD3ve
+KoegSG46yQo=

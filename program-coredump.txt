@@ -1,13 +1,6 @@
-ulimit -c unlimited
-echo kernel.core_pattern=/var/%t-%e-%p-%c.core >>/etc/sysctl.conf 文件路径一定要存在git 
-sysctl -p
-./a.out
-
-测试文件：
-#include<stdio.h>
-int main(void)
-{
-        int *a=NULL;
-        *a=0x1;
-        return 0;
-}
+U2FsdGVkX1/SHn/1hAvHhD+CBKIAOwHdOJ451gfukbO/6AbLaDQdGekqKEGrLVzy
+JhlULHJ2jXWHtXhxpkb2szg3VAepNo4xrGSNFzR28OO4IhPj2sPc01pXX9fNeKOU
+BBwlKfd6sByIlhs9I/sHn9rPxNECjj9PK4XedIo6oPBD7EB5U+2LcjwuibYnEsxB
+NPf9UQql0cVBJXVXcyQw92OSIQshqHA6IzPYCL8czxEMFjV+Jr9ujA16EJXOVnHO
+c3zgIEaCpneey6GDY7DKBMG3yX/JWyFqC2qsuDI8/PoIEpPtvI2bQexu+Oa1U7wm
+3wmEpadrqyAWgvsDMXknYFqXO3K08JYh
