@@ -1,6 +1,13 @@
-U2FsdGVkX1/zVoqdjHZeR9emrh/LXG9yWMgfuxx3qgezfEfpSBvuoF/AIrka23Ma
-T5j+j9/Pn/kLZUx/XG2O0yRN4TdBl1UFqKJm+jE8V6sDkmvzljCTWm6IkOGI0nNj
-F9eYPEfjhkx90S7RdMGJA6woVAFb63BLaD9OurVWkuVBmv75GZ3oAksb/2RGrvVO
-MYnUiw3uClZE/yqQyLabD5AAOgYQZDS3ffBKkfSo3Q9lLxNhp81etOGwnHMjgocP
-agl9kAcLwqU9jx9PqfKa9Pa3zaJPx/+14iW8RCzqa/PRuda4MIPRs0MFV8E6XWN8
-1s1TR0i+dCEMt/Ul3w0pK05FI3aNfFzu
+ulimit -c unlimited
+echo kernel.core_pattern=/var/%t-%e-%p-%c.core >>/etc/sysctl.conf 文件路径一定要存在git 
+sysctl -p
+./a.out
+
+测试文件：
+#include<stdio.h>
+int main(void)
+{
+        int *a=NULL;
+        *a=0x1;
+        return 0;
+}
